@@ -415,6 +415,8 @@ debug/tst_date.moc: ../../UnitTests/Date/tst_date.cpp \
 		D:/Qt/5.12.2/msvc2017/include/QtWidgets/QSizePolicy \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QMetaEnum \
 		D:/Qt/5.12.2/msvc2017/include/QtTest/qttestversion.h \
+		../../UnitTests/Date/date.hh \
+		../../WelcomeToTampere/baddate.hh \
 		debug/moc_predefs.h \
 		D:/Qt/5.12.2/msvc2017/bin/moc.exe
 	D:\Qt\5.12.2\msvc2017\bin\moc.exe $(DEFINES) --include C:/Users/JoonasPe/Desktop/pelttarj/EX3/build-UnitTests-Desktop_Qt_5_12_2_MSVC2017_32bit-Debug/Date/debug/moc_predefs.h -ID:/Qt/5.12.2/msvc2017/mkspecs/win32-g++ -IC:/Users/JoonasPe/Desktop/pelttarj/EX3/UnitTests/Date -IC:/Users/JoonasPe/Desktop/pelttarj/EX3/WelcomeToTampere -ID:/Qt/5.12.2/msvc2017/include -ID:/Qt/5.12.2/msvc2017/include/QtTest -ID:/Qt/5.12.2/msvc2017/include/QtCore -I. -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -ID:/Qt/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -ID:/Qt/Tools/mingw730_32/i686-w64-mingw32/include ..\..\UnitTests\Date\tst_date.cpp -o debug\tst_date.moc
@@ -736,13 +738,15 @@ debug/tst_date.o: ../../UnitTests/Date/tst_date.cpp D:/Qt/5.12.2/msvc2017/includ
 		D:/Qt/5.12.2/msvc2017/include/QtWidgets/QSizePolicy \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QMetaEnum \
 		D:/Qt/5.12.2/msvc2017/include/QtTest/qttestversion.h \
+		../../UnitTests/Date/date.hh \
+		../../WelcomeToTampere/baddate.hh \
 		debug/tst_date.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\tst_date.o ..\..\UnitTests\Date\tst_date.cpp
 
 debug/baddate.o: ../../WelcomeToTampere/baddate.cc ../../WelcomeToTampere/baddate.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\baddate.o ..\..\WelcomeToTampere\baddate.cc
 
-debug/date.o: ../../WelcomeToTampere/date.cc ../../WelcomeToTampere/date.hh \
+debug/date.o: ../../WelcomeToTampere/date.cc ../../UnitTests/Date/date.hh \
 		../../WelcomeToTampere/baddate.hh \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QtDebug \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qdebug.h \
