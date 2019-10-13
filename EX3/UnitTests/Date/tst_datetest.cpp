@@ -1,5 +1,6 @@
 #include <QString>
 #include <QtTest>
+#include "date.hh"
 
 class DateTest : public QObject
 {
