@@ -68,6 +68,22 @@ MorottajaTest:
     - Morottaja
 
 
+
+Date:
+  tags:
+    - qt
+  stage: build
+  script: 
+    - cd EX3/UnitTests/Date
+    - qmake
+    - make
+    - make clean
+  artifacts:
+    paths:
+      - EX3/UnitTests/Date/tst_date.cpp
+    expire_in: 2d
+
+
 DateTest:
   tags:
     - qt
@@ -76,4 +92,3 @@ DateTest:
     - cd EX3/UnitTests/Date
     - ./tst_date
     - Date
-
