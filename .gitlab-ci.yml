@@ -80,7 +80,7 @@ Date:
     - make clean
   artifacts:
     paths:
-      - EX3/UnitTests/Date/tst_date.cpp
+      - EX3/UnitTests/Date/tst_date
     expire_in: 2d
 
 

@@ -112,10 +112,9 @@ compiler_moc_source_make_all: release/tst_date.moc
 compiler_moc_source_clean:
 	-$(DEL_FILE) release\tst_date.moc
 release/tst_date.moc: ../../UnitTests/Date/tst_date.cpp \
-		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTest \
-		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTestDepends \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCore \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCoreDepends \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/QString \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qstring.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qchar.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qglobal.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qconfig-bootstrapped.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qconfig.h \
@@ -137,20 +136,22 @@ release/tst_date.moc: ../../UnitTests/Date/tst_date.cpp \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qmutex.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qnumeric.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qversiontagging.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qabstractanimation.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobject.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qnamespace.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs_impl.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qstring.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qchar.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qbytearray.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qrefcount.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qnamespace.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qarraydata.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringliteral.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringalgorithms.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringview.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringbuilder.h \
+		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTest \
+		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTestDepends \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCore \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCoreDepends \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qabstractanimation.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobject.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs_impl.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qlist.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qalgorithms.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qiterator.h \
@@ -364,7 +365,6 @@ release/tst_date.moc: ../../UnitTests/Date/tst_date.cpp \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/QNetworkReply \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/qnetworkreply.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QIODevice \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QString \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/QNetworkRequest \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/qnetworkrequest.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QUrl \
@@ -435,10 +435,9 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_source_clean
 
 ####### Compile
 
-release/tst_date.o: ../../UnitTests/Date/tst_date.cpp D:/Qt/5.12.2/msvc2017/include/QtTest/QtTest \
-		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTestDepends \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCore \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCoreDepends \
+release/tst_date.o: ../../UnitTests/Date/tst_date.cpp D:/Qt/5.12.2/msvc2017/include/QtCore/QString \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qstring.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qchar.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qglobal.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qconfig-bootstrapped.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qconfig.h \
@@ -460,20 +459,22 @@ release/tst_date.o: ../../UnitTests/Date/tst_date.cpp D:/Qt/5.12.2/msvc2017/incl
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qmutex.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qnumeric.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qversiontagging.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qabstractanimation.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobject.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qnamespace.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs_impl.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qstring.h \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/qchar.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qbytearray.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qrefcount.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qnamespace.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qarraydata.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringliteral.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringalgorithms.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringview.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qstringbuilder.h \
+		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTest \
+		D:/Qt/5.12.2/msvc2017/include/QtTest/QtTestDepends \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCore \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/QtCoreDepends \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qabstractanimation.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobject.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs.h \
+		D:/Qt/5.12.2/msvc2017/include/QtCore/qobjectdefs_impl.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qlist.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qalgorithms.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/qiterator.h \
@@ -687,7 +688,6 @@ release/tst_date.o: ../../UnitTests/Date/tst_date.cpp D:/Qt/5.12.2/msvc2017/incl
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/QNetworkReply \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/qnetworkreply.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QIODevice \
-		D:/Qt/5.12.2/msvc2017/include/QtCore/QString \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/QNetworkRequest \
 		D:/Qt/5.12.2/msvc2017/include/QtNetwork/qnetworkrequest.h \
 		D:/Qt/5.12.2/msvc2017/include/QtCore/QUrl \
