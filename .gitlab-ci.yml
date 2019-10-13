@@ -66,29 +66,3 @@ MorottajaTest:
   # On what jobs this dependes on, which artifacts we download for this job
   dependencies:
     - Morottaja
-
-
-
-Date:
-  tags:
-    - qt
-  stage: build
-  script: 
-    - cd EX3/UnitTests/Date
-    - qmake
-    - make
-    - make clean
-  artifacts:
-    paths:
-      - EX3/UnitTests/Date/tst_date
-    expire_in: 2d
-
-
-DateTest:
-  tags:
-    - qt
-  stage: test
-  script:
-    - cd EX3/UnitTests/Date
-    - ./tst_date
-    - Date
