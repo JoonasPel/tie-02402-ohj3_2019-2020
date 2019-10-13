@@ -66,3 +66,14 @@ MorottajaTest:
   # On what jobs this dependes on, which artifacts we download for this job
   dependencies:
     - Morottaja
+
+
+DateTest:
+  tags:
+    - qt
+  stage: test
+  script:
+    - cd EX3/UnitTests/Date
+    - ./tst_date
+    - Date
+
