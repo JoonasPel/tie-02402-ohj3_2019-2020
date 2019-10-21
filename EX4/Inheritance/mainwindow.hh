@@ -29,6 +29,7 @@ public slots:
     void spawnObjects(int count, ObjectType type);
     void moveObjects();
     void startOrStop();
+    void sendValue(int value);
 
 private:
 
@@ -46,6 +47,8 @@ private:
 
     static const QString S_START;
     static const QString S_STOP;
+
+    int value;
 };
 
 #endif // MAINWINDOW_H

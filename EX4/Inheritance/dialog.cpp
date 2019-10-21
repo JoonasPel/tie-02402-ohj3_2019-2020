@@ -6,6 +6,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+
 }
 
 Dialog::~Dialog()
@@ -15,7 +16,6 @@ Dialog::~Dialog()
 
 void Dialog::on_buttonBox_accepted()
 {
-
 }
 
 void Dialog::on_buttonBox_rejected()

@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
     MainWindow w(engine);
 
 
-
     w.show();
 
     return a.exec();

@@ -33,7 +33,7 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
     connect(ui->exitButton, &QPushButton::clicked,
             this, &MainWindow::close);
 
-    connect(dialog,SIGNAL(valueChanged(int value)),this,SLOT(spawnObjects(int value)));
+    connect(dialog, SIGNAL(sendValue(int)),this,SLOT(sendValue(int)));
 
     // Set timer
     timer_ = new QTimer(this);
@@ -50,6 +50,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::spawnObjects(int count, ObjectType type)
 {
+    emit sendValue(count);
     qDebug() << "Count: " << count << "  Type: "  << type;
     for( int i = 0; i < count; ++i)
     {
@@ -85,6 +86,11 @@ void MainWindow::startOrStop()
         timer_->stop();
         ui->startButton->setText(MainWindow::S_START);
     }
+
+}
+
+void MainWindow::sendValue(int value)
+{
 
 }
 
