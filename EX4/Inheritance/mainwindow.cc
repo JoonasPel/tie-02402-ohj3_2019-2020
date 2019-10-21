@@ -3,6 +3,7 @@
 #include "fastball.hh"
 #include "constants.hh"
 #include "movingobjectgraphics.hh"
+#include "dialog.h"
 
 #include <QDebug>
 #include <QLayout>
@@ -17,6 +18,9 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), engine_(controller)
 {
 
+    Dialog  *dialog = new Dialog;
+    dialog->exec();
+
     ui->setupUi(this);
 
     QGraphicsScene* scene = new QGraphicsScene;
@@ -28,6 +32,8 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
             this, &MainWindow::startOrStop);
     connect(ui->exitButton, &QPushButton::clicked,
             this, &MainWindow::close);
+
+    connect(dialog,SIGNAL(valueChanged(int value)),this,SLOT(spawnObjects(int value)));
 
     // Set timer
     timer_ = new QTimer(this);

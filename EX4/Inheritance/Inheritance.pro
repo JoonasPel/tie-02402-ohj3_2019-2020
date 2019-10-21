@@ -27,6 +27,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    dialog.cpp \
         main.cc \
         mainwindow.cc \
     movingobject.cc \
@@ -36,6 +37,7 @@ SOURCES += \
 
 
 HEADERS += \
+    dialog.h \
         mainwindow.hh \
     movingobject.hh \
     movingobjectgraphics.hh \
@@ -44,4 +46,5 @@ HEADERS += \
     constants.hh
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui

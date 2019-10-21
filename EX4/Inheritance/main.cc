@@ -1,5 +1,6 @@
 #include "mainwindow.hh"
 #include "objectcontroller.hh"
+#include "dialog.h"
 
 #include <QApplication>
 #include <cstdlib>
@@ -16,6 +17,8 @@ int main(int argc, char *argv[])
     ObjectController* engine = new ObjectController();
 
     MainWindow w(engine);
+
+
 
     w.show();
 

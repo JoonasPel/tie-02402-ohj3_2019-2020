@@ -12,3 +12,14 @@ Dialog::~Dialog()
 {
     delete ui;
 }
+
+void Dialog::on_buttonBox_accepted()
+{
+
+}
+
+void Dialog::on_buttonBox_rejected()
+{
+
+}
+

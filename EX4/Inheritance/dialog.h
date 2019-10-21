@@ -15,6 +15,16 @@ public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+signals:
+    void valueChanged(int value);
+
+private slots:
+    void on_buttonBox_accepted();
+
+    void on_buttonBox_rejected();
+
+    void on_horizontalSlider_valueChanged(int value);
+
 private:
     Ui::Dialog *ui;
 };
