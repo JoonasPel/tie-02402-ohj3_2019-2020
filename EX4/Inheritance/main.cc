@@ -6,6 +6,9 @@
 #include <cstdlib>
 #include <time.h>
 #include <QDebug>
+#include <QLayout>
+#include <QWidget>
+#include <QTimer>
 
 
 
@@ -16,10 +19,16 @@ int main(int argc, char *argv[])
 
     ObjectController* engine = new ObjectController();
 
+    Dialog dia;
     MainWindow w(engine);
 
 
-    w.show();
+    QObject::connect(&dia, &Dialog::sendValue, &w, &MainWindow::spawnObjects);
+
+    if(dia.exec() == QDialog::Accepted)
+    {
+        w.show();
+    }
 
     return a.exec();
 }

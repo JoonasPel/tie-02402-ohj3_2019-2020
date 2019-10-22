@@ -18,9 +18,6 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), engine_(controller)
 {
 
-    Dialog  *dialog = new Dialog;
-    dialog->exec();
-
     ui->setupUi(this);
 
     QGraphicsScene* scene = new QGraphicsScene;
@@ -33,8 +30,6 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
     connect(ui->exitButton, &QPushButton::clicked,
             this, &MainWindow::close);
 
-    connect(dialog, SIGNAL(sendValue(int)),this,SLOT(sendValue(int)));
-
     // Set timer
     timer_ = new QTimer(this);
     connect(timer_, &QTimer::timeout,
@@ -43,6 +38,7 @@ MainWindow::MainWindow(ObjectController* controller, QWidget *parent)
     timer_->setInterval(CLOCK_MS);
 }
 
+
 MainWindow::~MainWindow()
 {
 
@@ -50,7 +46,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::spawnObjects(int count, ObjectType type)
 {
-    emit sendValue(count);
     qDebug() << "Count: " << count << "  Type: "  << type;
     for( int i = 0; i < count; ++i)
     {
@@ -65,6 +60,7 @@ void MainWindow::spawnObjects(int count, ObjectType type)
         }
     }
 }
+
 
 void MainWindow::moveObjects()
 {
@@ -89,9 +85,5 @@ void MainWindow::startOrStop()
 
 }
 
-void MainWindow::sendValue(int value)
-{
-
-}
 
 

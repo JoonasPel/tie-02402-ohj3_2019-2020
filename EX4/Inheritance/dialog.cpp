@@ -1,5 +1,7 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include "fastball.hh"
+
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -12,6 +14,16 @@ Dialog::Dialog(QWidget *parent) :
 Dialog::~Dialog()
 {
     delete ui;
+}
+
+int Dialog::exec()
+{
+    int dialog = QDialog::exec();
+
+    if(dialog == QDialog::Accepted) {
+        emit sendValue(ui->horizontalSlider->value(), FASTBALL);
+    }
+    return dialog;
 }
 
 void Dialog::on_buttonBox_accepted()

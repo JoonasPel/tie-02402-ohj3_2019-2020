@@ -29,7 +29,6 @@ public slots:
     void spawnObjects(int count, ObjectType type);
     void moveObjects();
     void startOrStop();
-    void sendValue(int value);
 
 private:
 
